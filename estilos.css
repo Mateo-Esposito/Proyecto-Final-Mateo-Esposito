@@ -1,0 +1,38 @@
+#mensaje-bienvenida{
+    text-align: center;
+    font-weight: bold;
+    padding-top: 5px;
+    margin-bottom: 5px;
+}
+
+.body-index{
+   background-image: url(fotos/pexels-tima-miroshnichenko-7991579.jpg);
+   background-size: cover;
+   
+}
+
+#registrarse{
+    text-align: center;
+}
+
+#botonCompra{ 
+    border-radius: 5% black ;
+    border: 2px solid black;
+}
+
+#index3{
+    background-image: url(fotos/pexels-tima-miroshnichenko-7991433.jpg);
+    background-size: cover;
+
+}
+
+.card-title{
+    text-align: center;
+    font-size: 17px;
+}
+
+.card{
+    background: #abbaab; 
+    background: -webkit-linear-gradient(to right, #ffffff, #abbaab);
+    background: linear-gradient(to right, #ffffff, #abbaab); 
+}
