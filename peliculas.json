@@ -1,6 +1,33 @@
-{
-    "peliculas": [{
-        "id": 1,
-        "nombre": "aftersun"
-    }]
-}
+[
+    {
+      "imagenPelicula": "aftersun.jpg",
+      "nombre": "Aftersun",
+      "id": 1
+    },
+    {
+      "imagenPelicula": "alerta-extrema-210x300.jpg",
+      "nombre": "Alerta Extrema",
+      "id": 2
+    },
+    {
+      "imagenPelicula": "argentina-1985-210x300.jpg",
+      "nombre": "Argentina 1985",
+      "id": 3
+    },
+    {
+      "imagenPelicula": "Avatar-el-Camino-del-Agua.jpg",
+      "nombre": "Avatar: el Camino del Agua",
+      "id": 4
+    },
+    {
+      "imagenPelicula": "gato-con-botas-el-ultimo-deseo.jpg",
+      "nombre": "Gato con botas: El último deseo",
+      "id": 5
+    },
+    {
+      "imagenPelicula": "vecinogrunon.jpg",
+      "nombre": "Un vecino gruñón",
+      "id": 6
+    }
+  ]
+  
