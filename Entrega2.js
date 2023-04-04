@@ -58,7 +58,7 @@ function registrarse(){
                 timer: 1500,
               }).then(() => {
                 window.location.href = "index3.html";
-              });
+              })
 
         }else if( (formulario2[0].value == "") || (formulario2[1].value == "") || (formulario2[2].value == "") || (formulario2[3].value == "") ){
 
