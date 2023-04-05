@@ -142,14 +142,26 @@ let botonFinalizar = document.getElementById("modal2")
                 text: "Agrega al menos una película al carrito para poder realizar la compra",
             })
             return
+        }else {
+          peliculasCompradas.push(...carrito);
+          carrito = [];
+          localStorage.setItem("carrito", JSON.stringify(carrito));
+          localStorage.setItem(
+            "peliculasCompradas",
+            JSON.stringify(peliculasCompradas)
+          )
         }
         
     Swal.fire({
       icon: "success",
       title: "Su compra fue exitosa",
-      text: `Le llegara un link al Email con el que esta registrado, donde podra disfrutar de las películas que haya comprado. Muchas gracias!`,
+      text: `Le llegara un link al Email con el que esta registrado, donde podra disfrutar de las películas que compro. Muchas gracias!`,
       showConfirmButton: true
      })
+     .then(() => {
+      modal.innerHTML = ""
+      habilitarBotones()
+      })
 
     for (let pelicula of carrito) {
       peliculasCompradas.push(pelicula)
@@ -165,3 +177,34 @@ let botonFinalizar = document.getElementById("modal2")
     $('#modalCarrito').modal('hide')
   })
 
+// Evento de que elimina todo del carrito
+
+let botonEliminar = document.getElementById("eliminar")
+const contenedorCarrito = document.getElementById("PeliculasEnCarrito")
+
+botonEliminar.addEventListener("click", () => { 
+  carrito = [];
+  localStorage.setItem("carrito", JSON.stringify(carrito))
+  contenedorCarrito.innerHTML = ""
+  resetearBotones()
+})
+
+// Función que reseta el boton de la card, luego de apretar el boton de eliminar en el carrito.
+function resetearBotones() {
+  let botonCompraTicket = document.getElementsByClassName("botonAgregar")
+
+  for (let i = 0; i < botonCompraTicket.length; i++) {
+    botonCompraTicket[i].disabled = carrito.some(p => p.id === botonCompraTicket[i].id)
+  }
+}
+
+// Función que habilita los botones de las cards
+function habilitarBotones() {
+  let botonCompraTicket = document.getElementsByClassName("botonAgregar");
+
+  for (let i = 0; i < botonCompraTicket.length; i++) {
+    if (botonCompraTicket[i].disabled) {
+      botonCompraTicket[i].disabled = false;
+    }
+  }
+}
